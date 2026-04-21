@@ -1,0 +1,134 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{url}
+\usepackage{parskip}
+\RequirePackage{color}
+\RequirePackage{graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage[scale=0.9, top=0.6cm, bottom=0.6cm]{geometry}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\usepackage{supertabular}
+\usepackage{titlesec}
+\usepackage{multicol}
+\usepackage{multirow}
+
+% Section title formatting
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{6pt}{6pt}
+
+% Hyperlink colors
+\usepackage[unicode, draft=false]{hyperref}
+\definecolor{linkcolour}{rgb}{0,0.2,0.6}
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour}
+
+\usepackage{fontawesome5}
+
+% Compact job environments
+\newenvironment{jobshort}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    }
+    {
+    }
+
+\newenvironment{joblong}[2]
+    {
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+    \textbf{#1} & \hfill &  #2 \\[3.75pt]
+    \end{tabularx}
+    \begin{minipage}[t]{\linewidth}
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt,label=--]
+    }
+    {
+    \end{itemize}
+    \end{minipage}
+    }
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{tabularx}{\linewidth}{@{} C @{}}
+\Huge{Suhaas Surapaneni} \\[6pt]
+\href{https://github.com/SuhaasS}{\raisebox{-0.05\height}\faGithub\ SuhaasS} \ $|$ \
+\href{https://www.linkedin.com/in/suhaas-surapaneni/}{\raisebox{-0.05\height}\faLinkedin\ suhaas-surapaneni} \ $|$ \
+\href{mailto:suhaas.surapaneni@gmail.com}{\raisebox{-0.05\height}\faEnvelope \ suhaas.surapaneni@gmail.com} \ $|$ \
+\href{tel:+16692685382}{\raisebox{-0.05\height}\faMobile \ (669) 268-5382} \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% SUMMARY
+%----------------------------------------------------------------------------------------
+\section{Summary}
+Computer Science student at UC Irvine (GPA 3.96) with experience in full-stack development, system design, 
+machine learning, and cloud computing. Strong background in applied research and building scalable systems, seeking opportunities
+in software engineering and applied AI.
+
+%----------------------------------------------------------------------------------------
+% SKILLS
+%----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+\textbf{Technical Skills} & Python, C++, TypeScript, LangChain/LangGraph, MCP, A2A, Git, AWS (Lambda, EC2, S3, DynamoDB, API Gateway, CloudWatch, EventBridge, Bedrock), GCP Document AI, GraphQL, PostgreSQL, REST APIs, Docker \\[2pt]
+\textbf{Relevant Coursework} & Data Structures \& Algorithms, Systems Design, Software Engineering, Computer Organization, Machine Learning and Data Mining, Data Management, Information Retrieval, Intro to AI, Computer Networks, Security \& Privacy \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+% WORK EXPERIENCE
+%----------------------------------------------------------------------------------------
+\section{Work Experience}
+
+\begin{joblong}{PreSage.ai -- Founder \& Software Engineer}{Sept 2025 -- Present}
+\item Founded an AI-powered document data extraction SaaS, reducing client's processing time by 90\%
+\item Architected a scalable GCP Document AI pipeline with OCR, LLM integration, and ETL to PostgreSQL
+\item Built full-stack REST API dashboards in Python for customer usage insights and accuracy monitoring
+\item Managed GCP Cloud Run infrastructure with CI/CD pipelines and dev/prod separation
+\end{joblong}%
+
+\begin{joblong}{Zyprova -- Software Engineering Intern}{June 2025 -- Sept 2025}
+\item Built MCP-compliant microagents with Agent2Agent to automate data retrieval across services
+\item Optimized GraphQL + SQL pipelines to improve API performance, query efficiency, and reliability
+\item Contributed to Agile sprints and code reviews to enhance code quality and delivery consistency
+\item Improved HR and Finance microservices by refining schemas, resolvers, and integration flows
+\end{joblong}%
+
+\begin{joblong}{Pneumonia Detection Research -- SRA at UCSB}{July 2023}
+\item Developed a PyTorch CNN for pneumonia detection using chest X-rays, achieving 88.75\% accuracy
+\item Authored an 8-page research paper and presented findings to 400+ faculty, students, and researchers
+\end{joblong}%
+
+%----------------------------------------------------------------------------------------
+% PROJECTS
+%----------------------------------------------------------------------------------------
+\section{Projects}
+
+\begin{joblong}{DiscounTrack -- Browser Extension}{Jul 2025 -- Aug 2025}
+\item Built a Chrome extension and backend service for automated price tracking and email alerting
+\item Designed a serverless architecture using AWS Lambda, DynamoDB, EventBridge, and REST APIs
+\item Integrated Flask APIs and AWS SES to deliver real-time product monitoring and notification flows
+\end{joblong}%
+
+\begin{joblong}{InShort -- Civic Engagement Platform}{Jun 2025}
+\item Built a cross-platform civic engagement tool connecting a Swift UI frontend to a FastAPI backend
+\item Integrated legislative data APIs and embeddings to deliver personalized policy insights to users
+\end{joblong}%
+
+\begin{joblong}{Echo -- Creative Freelancing Platform}{Apr 2025}
+\item Developed a multimodal Claude agent to generate and refine prompts for diffusion models
+\item Built an iterative feedback loop enabling continuous image enhancement based on user input
+\end{joblong}%
+
+%----------------------------------------------------------------------------------------
+% EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+Sept 2024 -- June 2027 & B.S. Computer Science at \textbf{University of California, Irvine} \hfill (GPA: 3.96/4.0) \\[3.75pt]
+June 2025 & DroneCamp Certificate at \textbf{CSU Monterey Bay} \hfill (Jun 2025) \\
+\end{tabularx}
+
+\end{document}
